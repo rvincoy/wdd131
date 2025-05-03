@@ -1,0 +1,57 @@
+h1 {
+    font-family: "Times New Roman";
+    letter-spacing: 3px;
+    font-size: 50px;
+}
+h2, p, ol {
+    font-size: 20px;
+    font-family: "Times New Roman";
+}
+h2 {
+    color: #006EB6;
+    letter-spacing: 3px;
+    border-bottom: 1px solid lightgray;
+}
+header {
+    width: 60%;
+    margin:0 auto;
+    text-align: center;
+    padding: 40px 0 1px;
+    max-width: 600px;
+}
+img {
+    width: 150px;
+    line-height: 1.5;
+}
+main {
+    width: 60%;
+    margin: 0 auto;
+    counter-reset: sentence-counter;
+    padding-top: 30px;
+    max-width: 600px;
+}
+main p {
+    text-align: left;
+    padding: 10px;
+    line-height: 1.6;
+}
+footer {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+ol {
+    list-style-type: decimal;  /* Default numbering style (1, 2, 3, etc.) */
+    padding-left: 40px;        /* Add padding to the left to separate numbers from text */
+}
+ol li {
+    margin-left: 10px;         /* Adjust this to control the gap between the number and text */
+    line-height: 1.6;          /* Optional: Adjusts line spacing for better readability */
+}
+.dark {
+    background-color: #333;
+    color: white;
+}
+.dark h2 {
+    color: #6b98b5;
+}
