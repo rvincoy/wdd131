@@ -1,0 +1,36 @@
+<body>
+  <div id="content"></div>
+
+  <script>
+    // Array of article data
+    const articles = [
+      {
+        title: "Why Learn JavaScript",
+        body: "JavaScript is the backbone of interactive web development."
+      },
+      {
+        title: "Tips for Beginners",
+        body: "Start small, practice often, and build real projects."
+      },
+      {
+        title: "Advanced Features",
+        body: "Explore ES6, asynchronous programming, and frameworks like React."
+      }
+    ];
+
+    // Build a string of all articles
+    let articlesHTML = "";
+
+    for (let i = 0; i < articles.length; i++) {
+      articlesHTML += `
+        <article>
+          <h2>${articles[i].title}</h2>
+          <p>${articles[i].body}</p>
+        </article>
+      `;
+    }
+
+    // Insert into the DOM
+    document.getElementById("content").innerHTML = articlesHTML;
+  </script>
+</body>
