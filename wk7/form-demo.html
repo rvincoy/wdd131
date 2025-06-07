@@ -1,0 +1,49 @@
+<!-- form-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout Form</title>
+    <link rel="stylesheet" href="form-demo.css" />
+    <script src="form-demo.js" defer></script>
+  </head>
+ <body>
+
+  <h1>Checkout</h1>
+  <form id="orderForm">
+    <label for="fullname">Full Name</label>
+    <input type="text" id="fullname" name="fullname" required />
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="address">Address</label>
+    <textarea id="address" name="address" rows="3" required></textarea>
+
+    <label for="paymentMethod">Payment Method</label>
+    <select id="paymentMethod" name="paymentMethod" required>
+      <option value="">-- Select --</option>
+      <option value="credit">Credit Card</option>
+      <option value="paypal">PayPal</option>
+    </select>
+
+    <div id="creditFields" class="payment-details">
+      <label for="ccNumber">Credit Card Number</label>
+      <input type="text" id="ccNumber" name="ccNumber" />
+    </div>
+
+    <div id="paypalFields" class="payment-details">
+      <label for="paypalUsername">PayPal Username</label>
+      <input type="text" id="paypalUsername" name="paypalUsername" />
+    </div>
+
+    <button type="submit">Place Order</button>
+  </form>
+
+  <script>
+
+  </script>
+
+</body>
+</html>
