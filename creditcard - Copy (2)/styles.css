@@ -29,6 +29,9 @@
     right: 0;
     top: 15px;
 }
+#cardholder-container {
+    display: inline-block;
+}
 #cvc-container {
     position: absolute;
     width: 110px;
@@ -39,43 +42,45 @@
 #card-cvc {
     width: 60px;
 }
-#cvc-container p {
+#card-image {
+    float: right;
+    margin-right: 30px;
+}
+input {
+    background-color: whitesmoke;
+    border-radius: 4px;
     margin-left: 30px;
-    font-size: 10px;
+    height: 23px;
 }
-#card-front {
-    display: grid;
-    grid-template-areas:
-        "amount chip"
-        "number number"
-        "holder exp";
-    gap: 1rem;
-
-}
-.card-number-container {
-    grid-area: number;
-    margin-bottom: 0;
-}
-#card-number {
-    width: 300px;
-}
-#cardholder-container {
-    grid-area: holder;
-}
-#exp-container {
-    grid-area: exp;
-}
-#card-month, #card-year {
-    width: 30px;
+label {
+    display: block;
     margin-left: 30px;
 }
-#card-year {
-    margin-left: 10px;
+.hidden, #card-token {
+    display: none;
 }
 #image-container {
     position: relative;
+    margin-bottom: 5px;
     height: 55px;
     line-height: 55px;
+}
+#card-number {
+    width: 320px;
+}
+#cardholder-container {
+    margin-top: 35px;
+}
+#exp-container {
+    position: absolute;
+    bottom: 36px;
+    left: 220px;
+}
+#card-month, #card-year {
+    width: 30px;
+}
+#card-year {
+    margin-left: 6px;
 }
 #card-btn {
     position: absolute;
@@ -91,16 +96,13 @@
 #card-btn:hover {
   background-color: rgb(99, 98, 98);
 }
-input {
-    background-color: whitesmoke;
-    border-radius: 4px;
-    margin-left: 30px;
-    height: 23px;
-}
-label {
-    display: block;
+#amount {
     margin-left: 30px;
 }
-.hidden, #card-token {
-    display: none;
+#card-number-lbl {
+    margin-top: 30px;
+}
+#cvc-container p {
+    margin-left: 30px;
+    font-size: 10px;
 }
