@@ -19,7 +19,7 @@ searchBtn.addEventListener('click', () => {
       const recipeHTML = `
         <div class="recipe">
           <img src="${recipe.image}" alt="${recipe.name}" />
-          <div class"inner">
+          <div class="inner">
             <h2>${recipe.name}</h2>
             <span
                 class="rating"
