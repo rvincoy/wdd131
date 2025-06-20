@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Recipes</title>
+        <meta name="description" content="Recipes">
+        <meta name="author" content="Rolando Vincoy">
+        <link rel="stylesheet" href="recipes.css">
+    </head>
+    <body>
+        <header>
+            <img src="images/recipe-book.png" alt="">
+            <h1>Recipe Book</h1>
+        </header>
+        <main>
+            <p class="lblRecipe">Find a Recipe!</p>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search recipe by name..." />
+                <button id="searchBtn" aria-label="Search">🔍</button>
+            </div>
+            <div class="line"></div>
+            <div id="results">
+                <div class="recipe">
+                <img src="images/black-beans-and-rice.jpg" alt="Black Beans and Rice">
+                    <div class="inner">
+                        <h2>Black Beans and Rice</h2>
+                        <span class="rating" role="img" aria-label="Rating: 4 out of 5 stars">
+                            <span aria-hidden="true" class="icon-star">⭐</span>
+                            <span aria-hidden="true" class="icon-star">⭐</span>
+                            <span aria-hidden="true" class="icon-star">⭐</span>
+                            <span aria-hidden="true" class="icon-star-empty">⭐</span>
+                            <span aria-hidden="true" class="icon-star-empty">☆</span>
+                        </span>
+                        <p><strong>Author:</strong> Shane Thompson</p>
+                        <p><strong>Description:</strong> Black beans and tomatoes served over a bed of rice. Top with cheese and scoop up with tortilla chips for maximum enjoyment.</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer>
+            <p>©2023</p>
+            <a href="https://www.flaticon.com/free-icons/recipe" title="recipe icons">Recipe icons created by Freepik - Flaticon</a>
+            <div class="social">
+                <!-- Social media icons provided under CC from https://www.iconfinder.com/AlfredoCreates  -->
+                <a href="#"><img src="images/instagram_icon.svg" alt="instagram icon"></a>
+                <a href="#"><img src="images/youtube_icon.svg" alt="youtube icon"></a>
+                <a href="#"><img src="images/pinterest_icon.svg" alt="pinterest icon"></a>
+            </div>
+        </footer>
+        <script src="main.js" defer></script>
+    </body>
+</html>
