@@ -40,6 +40,8 @@ h1 {
 }
 .lblRecipe {
     text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 .line {
     margin-top: 15px;
