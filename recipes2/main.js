@@ -58,7 +58,7 @@ function recipeTemplate(recipe) {
 	<img src="${recipe.image}" alt="${recipe.name}" />
 	<figcaption>
 		<ul class="recipe__tags">
-
+      ${tagsTemplate(recipe.tags)}
 		</ul>
 		<h2><a href="#">${recipe.name}</a></h2>
 		<p class="recipe__ratings">
@@ -125,7 +125,8 @@ function renderRecipes(recipeList) {
 
 function init() {
   // get a random recipe
-  const recipe = getRandomListEntry(recipes)
+  const recipe = getRandomListEntry(recipes);
+
   // render the recipe with renderRecipes.
   renderRecipes([recipe]);
 }
