@@ -118,8 +118,8 @@ function renderRecipes(recipeList) {
 	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
 
 	// Set the HTML strings as the innerHTML of our output element.
-  console.log(recipeList[0]);
-  const recipeHTML = recipeTemplate(recipeList[0]);
+  console.log(recipeList);
+  const recipeHTML = recipeTemplate(recipeList);
   const resultsDiv1 = document.getElementById('results');
   resultsDiv1.innerHTML = recipeHTML;
 
@@ -130,6 +130,6 @@ function init() {
   const recipe = getRandomListEntry(recipes);
 
   // render the recipe with renderRecipes.
-  renderRecipes([recipe]);
+  renderRecipes(recipe);
 }
 init();
