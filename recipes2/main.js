@@ -78,6 +78,7 @@ function recipeTemplate(recipe) {
 
 function tagsTemplate(tags) {
   let html=``;
+  console.log(tags);
 	for (let i=0; i<tags.length; i++) {
     html = html + `<li>` + tags[i] + `</li>`;
   }
@@ -126,8 +127,6 @@ function renderRecipes(recipeList) {
 function init() {
   // get a random recipe
   const recipe = getRandomListEntry(recipes);
-  console.log(recipe);
-
 
   // render the recipe with renderRecipes.
   renderRecipes([recipe]);
