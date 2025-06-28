@@ -56,7 +56,6 @@ h1 {
         margin-right: 100px;
     }
     #results img {
-        position: 200px;
         height: 200px;
         width: 400px;
     }
@@ -69,7 +68,6 @@ h1 {
         gap: 30px;
     }
     .recipe img {
-        position: 10px;
         width: 500px;
     }
     .recipe p {
