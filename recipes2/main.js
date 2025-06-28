@@ -78,10 +78,10 @@ function recipeTemplate(recipe) {
 
 function tagsTemplate(tags) {
   let html=``;
-  console.log(tags);
-	for (let i=0; i<tags.length; i++) {
-    html = html + `<li>` + tags[i] + `</li>`;
-  }
+  //console.log(tags);
+	//for (let i=0; i<tags.length; i++) {
+   // html = html + `<li>` + tags[i] + `</li>`;
+  //}
 
 	return html;
 }
