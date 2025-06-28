@@ -77,9 +77,9 @@ function recipeTemplate(recipe) {
 }
 
 function tagsTemplate(tags) {
-  let html="";
-	for (let i=0; i<tags.length; i++) {
-    html = html + "<li>" + tags[i] + "</li>";
+  let html=``;
+	for (let i=0; i<tags; i++) {
+    html = html + `<li>` + tags[i] + `</li>`;
   }
 
 	return html;
