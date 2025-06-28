@@ -119,8 +119,9 @@ function renderRecipes(recipeList) {
 
 	// Set the HTML strings as the innerHTML of our output element.
   const recipeHTML = recipeTemplate(recipeList);
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = recipeHTML;
+  const resultsDiv1 = document.getElementById('results');
+  console.log(recipeHTML);
+  resultsDiv1.innerHTML = recipeHTML;
 
 }
 
