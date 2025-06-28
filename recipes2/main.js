@@ -10,6 +10,7 @@ searchBtn.addEventListener('click', () => {
   const matches = recipes.filter(recipe =>
     recipe.name.toLowerCase().includes(query)
   );
+  matches.sort((a,b) => a.name.localeCompare(b.name));
   console.log('You clicked search');
 
   if (matches.length === 0) {
