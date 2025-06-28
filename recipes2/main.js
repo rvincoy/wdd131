@@ -49,23 +49,27 @@ function getRandomListEntry(list) {
 }
 
 function recipeTemplate(recipe) {
-	return `
-        <div class="recipe">
-          <img src="${recipe.image}" alt="${recipe.name}" />
-          <div class="inner">
-            <h2>${recipe.name}</h2>
-            <span
-                class="rating"
-                role="img"
-                aria-label="Rating: ${recipe.rating} out of 5 stars"
-            >
-                ${ratingTemplate(recipe.rating)}
-            </span>
-            <p><strong>Author:</strong> ${recipe.author}</p>
-            <p><strong>Description:</strong> ${recipe.description}</p>
-          </div>
-        </div>
-      `;
+	return `<figure class="recipe">
+	<img src="${recipe.image}" alt="${recipe.name}" />
+	<figcaption>
+		<ul class="recipe__tags">
+      ${tagsTemplate(recipe.tags)}
+		</ul>
+		<h2><a href="#">${recipe.name}</a></h2>
+		<p class="recipe__ratings">
+			<span
+				class="rating"
+				role="img"
+				aria-label="Rating: ${recipe.rating} out of 5 stars"
+			>
+				${ratingTemplate(recipe.rating)}
+			</span>
+		</p>
+		<p class="recipe__description">
+			${recipe.description}
+		</p>
+</figcaption>
+</figure>`;
 }
 
 function tagsTemplate(tags) {
