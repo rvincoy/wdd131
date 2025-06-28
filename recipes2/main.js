@@ -11,7 +11,7 @@ searchBtn.addEventListener('click', () => {
     recipe.name.toLowerCase().includes(query)
   );
   matches.sort((a,b) => a.name.localeCompare(b.name));
-  console.log('You clicked search');
+  //console.log('You clicked search');
 
   if (matches.length === 0) {
     resultsDiv.innerHTML = '<p>No matching recipes found.</p>';
@@ -119,7 +119,7 @@ function renderRecipes(recipeList) {
 	// use the recipeTemplate function to transform our recipe objects into recipe HTML strings
 
 	// Set the HTML strings as the innerHTML of our output element.
-  console.log(recipeList);
+  //console.log(recipeList);
   const recipeHTML = recipeTemplate(recipeList);
   const resultsDiv1 = document.getElementById('results');
   resultsDiv1.innerHTML = recipeHTML;
