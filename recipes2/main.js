@@ -58,7 +58,7 @@ function recipeTemplate(recipe) {
 	<img src="${recipe.image}" alt="${recipe.name}" />
 	<figcaption>
 		<ul class="recipe__tags">
-      ${tagsTemplate(recipe.tags)}
+
 		</ul>
 		<h2><a href="#">${recipe.name}</a></h2>
 		<p class="recipe__ratings">
