@@ -126,6 +126,8 @@ function renderRecipes(recipeList) {
 function init() {
   // get a random recipe
   const recipe = getRandomListEntry(recipes);
+  console.log(recipe);
+
 
   // render the recipe with renderRecipes.
   renderRecipes([recipe]);
