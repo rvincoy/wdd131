@@ -1,0 +1,76 @@
+.social img {
+    height: 1.5em;
+}
+header {
+    display: flex;
+    justify-content: center;
+    background-color:rgb(250, 167, 137);
+    border: 1px solid black;
+    margin-bottom: 15px;
+}
+header img {
+    height: 50px;
+}
+footer {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    gap: 1em;
+    padding: 1em;
+    background-color:rgb(250, 167, 137);
+    border: 1px solid black;
+}
+h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.parent-container {
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+}
+.search-container input {
+    width:90%;
+    flex: 1;
+}
+.lblRecipe {
+    text-align: left;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+.line {
+    margin-top: 15px;
+    border-bottom: 1px solid black;
+}
+@media screen and (max-width: 600px) {
+    #results {
+        display: flex;
+        flex-direction: column;
+        margin-top: 15px;
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+    #results img {
+        height: 200px;
+        width: 400px;
+    }
+}
+@media screen and (min-width: 1000px) {
+    .recipe {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px;
+        gap: 30px;
+    }
+    .recipe img {
+        width: 500px;
+    }
+    .recipe p {
+        width: 300px;
+    }
+}
