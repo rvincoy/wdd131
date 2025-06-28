@@ -51,7 +51,6 @@ function getRandomListEntry(list) {
   const randomNum = random(listLength);
   return list[randomNum];
 }
-console.log(getRandomListEntry(recipes));
 
 function recipeTemplate(recipe) {
 	return `<figure class="recipe">
