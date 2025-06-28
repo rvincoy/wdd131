@@ -121,7 +121,6 @@ function renderRecipes(recipeList) {
   console.log(recipeList);
   const recipeHTML = recipeTemplate(recipeList);
   const resultsDiv1 = document.getElementById('results');
-  console.log(recipeHTML);
   resultsDiv1.innerHTML = recipeHTML;
 
 }
