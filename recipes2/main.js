@@ -26,11 +26,7 @@ searchBtn.addEventListener('click', () => {
                 role="img"
                 aria-label="Rating: 4 out of 5 stars"
             >
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">⭐</span>
-                <span aria-hidden="true" class="icon-star-empty">☆</span>
+                ${ratingTemplate(recipe.rating)}
             </span>
             <p><strong>Author:</strong> ${recipe.author}</p>
             <p><strong>Description:</strong> ${recipe.description}</p>
