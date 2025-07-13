@@ -55,6 +55,7 @@ const cardGenerator = () => {
     const face = document.createElement("img");
     face.classList = "face";
     face.src = item.imgSrc;
+    face.alt = "hidden card"
     const back = document.createElement("div");
     back.classList = "back";
 
