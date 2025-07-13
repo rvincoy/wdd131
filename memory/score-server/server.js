@@ -3,7 +3,14 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = 5500;
+const PORT = 00;
+
+app.use(cors({
+  origin: 'https://rvincoy.github.io'
+}));
+
+// Or allow all origins (only for local testing)
+app.use(cors());
 
 // Middleware to parse JSON
 app.use(express.json());
@@ -28,5 +35,5 @@ app.post('/save-scores', (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at http://rvincoy.github.io:${PORT}`);
 });
