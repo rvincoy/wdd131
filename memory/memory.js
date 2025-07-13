@@ -108,6 +108,7 @@ const compareCards = (e) => {
             scoreData.sort((a, b) => a.score - b.score);
 
             saveScoreData(scoreData); // Save updated file
+            console.log(scoreData); //log it
           }
         } catch (e) {
           console.log("Error saving high score:", e);
@@ -145,23 +146,36 @@ async function readScores() {
 }
 
 function saveScoreData(scoreData) {
-  const latest = scoreData[scoreData.length - 1];
+  const sheetdbUrl = "https://sheetdb.io/api/v1/6zqn32d50ikqu";
 
-  fetch("https://sheetdb.io/api/v1/6zqn32d50ikqu", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      data: [{ name: latest.name, score: latest.score }]
-    })
+  // Step 1: Delete all existing rows
+  fetch(`${sheetdbUrl}/all`, {
+    method: "DELETE",
   })
-    .then(res => res.json())
-    .then(response => {
-      console.log("Score saved to Google Sheets:", response);
-    })
-    .catch(err => {
-      console.error("Failed to save score to Google Sheets:", err);
+  .then(response => {
+    if (!response.ok) {
+      throw new Error("Failed to delete scores.");
+    }
+    console.log("All existing scores deleted.");
+
+    // Step 2: Re-insert updated score list
+    return fetch(sheetdbUrl, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        data: scoreData
+      })
     });
+  })
+  .then(res => res.json())
+  .then(data => {
+    console.log("Scores saved successfully:", data);
+  })
+  .catch(error => {
+    console.error("Error saving scores to Google Sheets:", error);
+  });
 }
+
 
