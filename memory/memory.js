@@ -127,26 +127,41 @@ const compareCards = (e) => {
   }
 }
 
-function readScores() {
-  return fetch('public/highscores.json')
-    .then(res => res.json())
-    .then(data => {
-      scoreData = data;
-      console.log("Loaded score data:", scoreData);
-    })
-    .catch(err => console.error("Failed to load score data:", err));
+async function readScores() {
+  try {
+    const res = await fetch("https://sheetdb.io/api/v1/6zqn32d50ikqu");
+    const data = await res.json();
+    scoreData = data.map(entry => ({
+      name: entry.name,
+      score: parseInt(entry.score, 10)
+    }));
+
+    // Sort scores by lowest number of moves
+    scoreData.sort((a, b) => a.score - b.score);
+    console.log("Loaded score data from Google Sheets:", scoreData);
+  } catch (err) {
+    console.error("Failed to load score data from Google Sheets:", err);
+  }
 }
 
 function saveScoreData(scoreData) {
-  fetch('http://rvincoy.github.io:3000/save-scores', {
-    method: 'POST',
+  const latest = scoreData[scoreData.length - 1];
+
+  fetch("https://sheetdb.io/api/v1/6zqn32d50ikqu", {
+    method: "POST",
     headers: {
-      'Content-Type': 'application/json'
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify(scoreData)
+    body: JSON.stringify({
+      data: [{ name: latest.name, score: latest.score }]
+    })
   })
-  .then(response => response.text())
-  .then(msg => console.log("Server says:", msg))
-  .catch(err => console.error("Error saving scores:", err));
+    .then(res => res.json())
+    .then(response => {
+      console.log("Score saved to Google Sheets:", response);
+    })
+    .catch(err => {
+      console.error("Failed to save score to Google Sheets:", err);
+    });
 }
 
