@@ -106,6 +106,10 @@ const compareCards = (e) => {
 
             // Sort scores by fewest moves (lower is better)
             scoreData.sort((a, b) => a.score - b.score);
+            const playerIndex = scoreData.findIndex(entry => entry.name === playerName && entry.score === playMoves);
+            if (playerIndex !== -1) {
+              alert(`Congratulations ${playerName}! You are ranked #${playerIndex + 1} on the leaderboard.`);
+            }
 
             saveScoreData(scoreData); // Save updated file
             console.log(scoreData); //log it
