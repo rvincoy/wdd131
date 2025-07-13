@@ -138,7 +138,7 @@ function readScores() {
 }
 
 function saveScoreData(scoreData) {
-  fetch('http://localhost:3000/save-scores', {
+  fetch('http://rvincoy.github.io:3000/save-scores', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
