@@ -3,7 +3,7 @@ const express = require('express');
 const fs = require('fs');
 const path = require('path');
 const app = express();
-const PORT = 00;
+const PORT = 3000;
 
 app.use(cors({
   origin: 'https://rvincoy.github.io'
